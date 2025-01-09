@@ -15,4 +15,6 @@ function generateRandomQuote() {
 
 generateBtn.addEventListener("click", generateRandomQuote);
 
-generateRandomQuote();
+// Цитаты будут высвечиваться при загрузке страницы
+
+// generateRandomQuote();
