@@ -58,3 +58,7 @@ body {
 .author {
   font-style: italic;
 }
+
+#author {
+  display: none;
+}

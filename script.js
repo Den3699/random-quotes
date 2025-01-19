@@ -23,6 +23,7 @@ function generateRandomQuote() {
     : "Add to favorites";
 
   toggleFavoriteBtn.style.display = "inline-block"; //Кнопка появляется, когда появляются цитаты.
+  quoteAuthorElement.style.display = "block";
 }
 
 function toggleFavorite() {
