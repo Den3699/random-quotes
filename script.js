@@ -18,9 +18,13 @@ function generateRandomQuote() {
   //const quote = `"<em>${randomQuote.quote}"</em><br>${randomQuote.author}`;
   quoteElement.textContent = quote;
   quoteAuthorElement.textContent = author;
-  toggleFavoriteBtn.textContent = randomQuote.isFavorite //Изменение названия кнопки.
-    ? "Remove from favorites"
-    : "Add to favorites";
+ 
+  toggleFavoriteBtn.classList.toggle("fa", randomQuote.isFavorite);  //Изменение иконки при нажатии.
+  toggleFavoriteBtn.classList.toggle("far", !randomQuote.isFavorite);
+
+  // toggleFavoriteBtn.textContent = randomQuote.isFavorite //Изменение названия кнопки.
+  //   ? "Remove from favorites"
+  //   : "Add to favorites";
 
   toggleFavoriteBtn.style.display = "inline-block"; //Кнопка появляется, когда появляются цитаты.
   quoteAuthorElement.style.display = "block";
@@ -30,15 +34,18 @@ function toggleFavorite() {
   const currentQuote = quotes[currentQuoteIndex]; //Поиск обьекта в массиве обьектов.
   currentQuote.isFavorite = !currentQuote.isFavorite;
 
+  toggleFavoriteBtn.classList.toggle("fa", currentQuote.isFavorite);  //Изменение иконки при нажатии.
+  toggleFavoriteBtn.classList.toggle("far", !currentQuote.isFavorite);  
+
   // if (toggleFavoriteBtn.textContent === "Add to favorites") {
   //   toggleFavoriteBtn.textContent = "Remove from favorites";
   // } else {
   //   toggleFavoriteBtn.textContent = "Add to favorites";
   // }
 
-  toggleFavoriteBtn.textContent = currentQuote.isFavorite //Изменение названия кнопки.
-    ? "Remove from favorites"
-    : "Add to favorites";
+  // toggleFavoriteBtn.textContent = currentQuote.isFavorite //Изменение названия кнопки.
+  //   ? "Remove from favorites"
+  //   : "Add to favorites";
 
   if (currentQuote.isFavorite) {
     const favoriteCard = document.createElement("div");

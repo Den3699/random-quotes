@@ -62,3 +62,10 @@ body {
 #author {
   display: none;
 }
+
+.star-icon {
+  font-size: 30px;
+  cursor: pointer;
+  color: yellow;
+  vertical-align: middle;
+}
